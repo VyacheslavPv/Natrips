@@ -1,0 +1,14 @@
+{
+  "name": "nature-trips",
+  "version": "1.0.0",
+  "description": "landing page for nature trips",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Parshenkov",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
