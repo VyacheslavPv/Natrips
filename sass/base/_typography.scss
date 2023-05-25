@@ -47,6 +47,7 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+  backface-visibility: hidden;
 
   &:hover {
     transform: scale(1.01);
