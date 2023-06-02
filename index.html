@@ -8,8 +8,8 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="css/icon-font.css" />
+    <!-- Link here for icon-font is for develepment purposes only. For production build this line should be commented -->
+    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -25,9 +25,7 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>01</span> About Natours</a
-            >
+            <a href="#" class="navigation__link"><span>01</span> About us</a>
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link"
@@ -94,17 +92,25 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
-                src="img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
-              /><img
-                src="img/nat-2-large.jpg"
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
-              /><img
-                src="img/nat-3-large.jpg"
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -374,7 +380,7 @@
                     <label for="small" class="form__radio-label"
                       ><span class="form__radio-button"></span> Small tour
                       group</label
-                    >>
+                    >
                   </div>
                   <div class="form__radio-group">
                     <input
@@ -401,7 +407,20 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-white.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -437,31 +456,29 @@
     </footer>
     <div class="popup" id="popup">
       <div class="popup__content">
-        <div class="popup__left">
+        <a href="#section__tours" class="popup__close">&times;</a>
+        <h2 class="heading-secondary u-margin-bottom-small">
+          Start booking now
+        </h2>
+        <div class="popup__images">
           <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
           <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
         </div>
-        <div class="popup__right">
-          <a href="#section__tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary u-margin-bottom-small">
-            Start booking now
-          </h2>
-          <h3 class="heading-tertiary u-margin-bottom-small">
-            Important &ndash; Please read these terms before booking
-          </h3>
-          <p class="popup__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
-            fuga mollitia totam architecto asperiores at tempora iusto,
-            voluptas, assumenda possimus dignissimos. Vel nostrum soluta minima
-            totam mollitia voluptates laudantium ea? Veniam fuga mollitia totam
-            architecto asperiores at tempora iusto, voluptas, assumenda possimus
-            dignissimos. Vel nostrum soluta minima totam mollitia voluptates
-            laudantium ea? Veniam fuga mollitia totam architecto asperiores at
-            tempora iusto, voluptas, assumenda possimus dignissimos. Vel nostrum
-            soluta minima totam mollitia voluptates laudantium ea?
-          </p>
-          <a href="#" class="btn btn--green">Book now</a>
-        </div>
+        <h3 class="heading-tertiary u-margin-bottom-small u-margin-top-small">
+          Important &ndash; Please read these terms before booking
+        </h3>
+        <p class="popup__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam fuga
+          mollitia totam architecto asperiores at tempora iusto, voluptas,
+          assumenda possimus dignissimos. Vel nostrum soluta minima totam
+          mollitia voluptates laudantium ea? Veniam fuga mollitia totam
+          architecto asperiores at tempora iusto, voluptas, assumenda possimus
+          dignissimos. Vel nostrum soluta minima totam mollitia voluptates
+          laudantium ea? Veniam fuga mollitia totam architecto asperiores at
+          tempora iusto, voluptas, assumenda possimus dignissimos. Vel nostrum
+          soluta minima totam mollitia voluptates laudantium ea?
+        </p>
+        <a href="#" class="btn btn--green">Book now</a>
       </div>
     </div>
   </body>
